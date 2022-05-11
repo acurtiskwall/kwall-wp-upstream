@@ -8,3 +8,6 @@ workflows:
       - type: webphp
         description: 'install Wordpress'
         script: private/scripts/deploy_product/drush_site_install.php
+      - type: webphp
+        description: 'Notify KWALL Sites'
+        script: private/scripts/firebase_notice.php
