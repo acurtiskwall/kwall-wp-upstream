@@ -16,6 +16,7 @@ passthru("wp search-replace 'https://dev-kwall-demo-site.pantheonsite.io' '" . $
 passthru("wp user create " . $user . " 'info@kwallcompany.com' --role=admin --user_pass=" . $pass . "");
 //Copy files from template folder
 passthru("cp -r " . $_ENV['DOCROOT'] . "install/files_dev/ " . $_ENV['DOCROOT'] . "/wp-content/uploads/");
+passthru("cp -r " . $_ENV['DOCROOT'] . "install/wp-content/ " . $_ENV['DOCROOT'] . "web/wp/wp-content/");
 
 
 print "Install Wordpress complete.\n";
