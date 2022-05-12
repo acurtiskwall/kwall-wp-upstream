@@ -11,18 +11,12 @@ $email = 'site-deploys-aaaaeq6pviqdhxcpn7rglgn7h4@kwall.slack.com';
 
 print "Installing Wordpress...\n";
 passthru('wp core install --url=' . $url . ' --title=' . $title . ' --admin_user=' . $user . ' --admin_password=' . $pass . ' --admin_email=' . $email);
-print "Install wp command ran.\n";
 passthru('wp db import /code/install/imported_database.sql');
-print "Import wp command ran.\n";
+passthru("cp -r /code/install/wp-content/* /code/web/wp-content/");
+passthru("cp -r /code/install/files_dev/* " . $_ENV['HOME'] . "files/");
 passthru("wp search-replace 'https://dev-kwall-demo-site.pantheonsite.io' '" . $secure_url . "'");
-print "Search-replace wp command ran.\n";
 passthru("wp user create " . $user . " 'info@kwallcompany.com' --role=admin --user_pass=" . $pass . "");
 //Copy files from template folder
-print "wp user create wp command ran.\n";
-passthru("cp -r /code/install/wp-content/ /code/web/wp-content/");
-passthru("cp -r /code/install/files_dev/ " . $_ENV['HOME'] . "files/");
-
-
 
 print "Install Wordpress complete.\n";
 
