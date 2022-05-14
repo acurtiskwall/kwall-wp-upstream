@@ -6,6 +6,22 @@
         {
             "type": "composer",
             "url": "https://wpackagist.org"
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "gravityforms/gravityforms",
+            "version": "2.4.21.3",
+            "type": "wordpress-plugin",
+            "dist": {
+              "type": "zip",
+              "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%WP_PLUGIN_GF_KEY}"
+            },
+            "require": {
+              "composer/installers": "^1.4",
+              "gotoandplay/gravityforms-composer-installer": "^2.3"
+            }
+          }
         }
     ],
     "require": {
@@ -26,7 +42,7 @@
         "wpackagist-plugin/megamenu":"2.9.5",
         "wpackagist-plugin/user-role-editor":"4.61.2",
         "wp-coding-standards/wpcs": "^1.2.1",
-        "gravityforms/gravityforms": "^2.6.1",
+        "gravityforms/gravityforms": "2.4.21.3",
         "wpackagist-plugin/advanced-custom-fields-pro": "^5.12.2",
         "redirection/redirection": "^5.2.3"
     },
