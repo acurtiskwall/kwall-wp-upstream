@@ -7,22 +7,18 @@
             "type": "composer",
             "url": "https://wpackagist.org"
         },
-        {
-          "type": "package",
-          "package": {
-            "name": "gravityforms/gravityforms",
-            "version": "2.4.21.3",
-            "type": "wordpress-plugin",
-            "dist": {
-              "type": "zip",
-              "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%WP_PLUGIN_GF_KEY}"
-            },
-            "require": {
-              "composer/installers": "^1.4",
-              "gotoandplay/gravityforms-composer-installer": "^2.3"
-            }
-          }
-        }
+    		{
+    			"type": "package",
+    			"package": {
+    				"name": "advanced-custom-fields/advanced-custom-fields-pro",
+    				"version": "dev-master",
+    				"type": "wordpress-plugin",
+    				"dist": {
+    					"type": "zip",
+    					"url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz"
+    				}
+    			}
+    		}
     ],
     "require": {
         "php": ">=7.2",
@@ -42,9 +38,7 @@
         "wpackagist-plugin/megamenu":"2.9.5",
         "wpackagist-plugin/user-role-editor":"4.61.2",
         "wp-coding-standards/wpcs": "^1.2.1",
-        "gravityforms/gravityforms": "2.4.21.3",
-        "wpackagist-plugin/advanced-custom-fields-pro": "^5.12.2",
-        "redirection/redirection": "^5.2.3"
+        "wpackagist-plugin/redirection": "^5.2.3"
     },
     "require-dev": {
         "behat/mink-goutte-driver": "^1.2.1",

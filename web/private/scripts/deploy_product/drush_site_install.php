@@ -12,6 +12,10 @@ $email = 'site-deploys-aaaaeq6pviqdhxcpn7rglgn7h4@kwall.slack.com';
 print "Installing Wordpress...\n";
 passthru('wp core install --url=' . $url . ' --title=' . $title . ' --admin_user=' . $user . ' --admin_password=' . $pass . ' --admin_email=' . $email);
 passthru('wp db import /code/install/imported_database.sql');
+passthru('wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
+passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz" --activate');
+
+//advanced-custom-fields-pro wp plugin install “http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=<YOUR_KEY>"
 //passthru("cp -r /code/install/wp-content/plugins/* " . $_ENV['HOME'] . "code/web/wp-content/plugins/");
 //passthru("cp -r /code/install/wp-content/themes/kwall-demo " . $_ENV['HOME'] . "code/web/wp-content/themes/");
 passthru("cp -r /code/install/files_dev/* " . $_ENV['HOME'] . "files/");
