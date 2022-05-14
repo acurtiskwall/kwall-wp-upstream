@@ -25,7 +25,10 @@
         "wpackagist-plugin/custom-post-type-ui":"1.10.2",
         "wpackagist-plugin/megamenu":"2.9.5",
         "wpackagist-plugin/user-role-editor":"4.61.2",
-        "wp-coding-standards/wpcs": "^1.2.1"
+        "wp-coding-standards/wpcs": "^1.2.1",
+        "gravityforms/gravityforms": "^2.6.1",
+        "wpackagist-plugin/advanced-custom-fields-pro": "^5.12.2",
+        "redirection/redirection": "^5.2.3"
     },
     "require-dev": {
         "behat/mink-goutte-driver": "^1.2.1",
