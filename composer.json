@@ -11,7 +11,23 @@
     {
       "type": "path",
       "url": "upstream-config"
-    }
+    },
+    {
+        "type": "package",
+        "package": {
+          "name": "advanced-custom-fields/advanced-custom-fields-pro",
+          "version": "5.12.2",
+          "type": "wordpress-plugin",
+          "dist": {
+            "type": "zip",
+            "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%PLUGIN_ACF_KEY}&t={%VERSION}"
+          },
+          "require": {
+            "composer/installers": "^1.4",
+            "ffraenz/private-composer-installer": "^5.0"
+          }
+      }
+  }
   ],
   "require": {
     "pantheon-upstreams/upstream-config": "*"
@@ -23,6 +39,11 @@
     "sort-packages": true,
     "platform": {
       "php": "7.2"
+    },
+    "allow-plugins": {
+      "ffraenz/private-composer-installer": true,
+      "johnpbloch/wordpress-core-installer": true,
+      "composer/installers": true
     }
   },
   "extra": {
