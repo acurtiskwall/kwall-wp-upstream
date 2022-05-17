@@ -7,18 +7,10 @@
             "type": "composer",
             "url": "https://wpackagist.org"
         },
-    		{
-    			"type": "package",
-    			"package": {
-    				"name": "advanced-custom-fields/advanced-custom-fields-pro",
-    				"version": "dev-master",
-    				"type": "wordpress-plugin",
-    				"dist": {
-    					"type": "zip",
-    					"url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz"
-    				}
-    			}
-    		}
+        {
+          "type": "composer",
+          "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
+        }
     ],
     "require": {
         "php": ">=7.2",
@@ -38,7 +30,8 @@
         "wpackagist-plugin/megamenu":"2.9.5",
         "wpackagist-plugin/user-role-editor":"4.61.2",
         "wp-coding-standards/wpcs": "^1.2.1",
-        "wpackagist-plugin/redirection": "^5.2.3"
+        "wpackagist-plugin/redirection": "^5.2.3",
+        "advanced-custom-fields/advanced-custom-fields-pro": "^5.12"
     },
     "require-dev": {
         "behat/mink-goutte-driver": "^1.2.1",
