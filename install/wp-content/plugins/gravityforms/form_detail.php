@@ -382,7 +382,8 @@ class GFFormDetail {
 			<aside class="sidebar ui-tabs" role="region" >
 				<div class="sidebar__nav-wrapper">
 					<div class="search-button">
-						<input type="text" class="search-button__input" placeholder="<?php echo esc_attr__( 'Search for a field', 'gravityforms' ); ?>">
+						<label for="form_editor_search_input" class="gform-visually-hidden"><?php echo esc_attr__( 'Search a form field by name', 'gravityforms' ); ?></label>
+						<input id="form_editor_search_input" type="text" class="search-button__input" placeholder="<?php echo esc_attr__( 'Search for a field', 'gravityforms' ); ?>">
 						<span class="clear-button"></span>
 					</div>
 					<ul class="sidebar__nav ui-tabs-nav">
@@ -441,6 +442,7 @@ class GFFormDetail {
 					<form method="post" id="gform_update">
 						<?php wp_nonce_field( "gforms_update_form_{$form_id}", 'gforms_update_form' ); ?>
 						<input type="hidden" id="gform_meta" name="gform_meta" />
+						<input type="hidden" id="gform_export" name="gform_export" value="false"/>
 					</form>
 				</div>
 				<div class="sidebar__panel sidebar__panel--settings" id="field_settings_container" data-active-field-class="">
@@ -1570,14 +1572,22 @@ class GFFormDetail {
 									<div class="gform_column_wrapper">
 										<?php
 
+										/*
+										* Translators: This string is a list of genders.  If the language you are translating into
+										* doesn't have equivalents, just provide a list with as many or few genders as your language has.
+										*/
+										$genders_string = __( 'Male, Female, Non-binary, Agender, My gender is not listed, Prefer not to answer', 'gravityforms' );
+										$genders_array  = explode( ', ', $genders_string );
+										$gender_choices = array_values( array_unique( $genders_array ) );
+
 										$predefined_choices = array(
 											__( 'Countries', 'gravityforms' )                   => $gf_address_field->get_countries(),
 											__( 'U.S. States', 'gravityforms' )                 => $gf_address_field->get_us_states(),
 											__( 'Canadian Province/Territory', 'gravityforms' ) => $gf_address_field->get_canadian_provinces(),
 											__( 'Continents', 'gravityforms' )                  => array( __( 'Africa', 'gravityforms' ), __( 'Antarctica', 'gravityforms' ), __( 'Asia', 'gravityforms' ), __( 'Australia', 'gravityforms' ), __( 'Europe', 'gravityforms' ), __( 'North America', 'gravityforms' ), __( 'South America', 'gravityforms' ) ),
-											__( 'Gender', 'gravityforms' )                      => array( __( 'Male', 'gravityforms' ), __( 'Female', 'gravityforms' ), __( 'Prefer Not to Answer', 'gravityforms' ) ),
+											__( 'Gender', 'gravityforms' )                      => $gender_choices,
 											__( 'Age', 'gravityforms' )                         => array( __( 'Under 18', 'gravityforms' ), __( '18-24', 'gravityforms' ), __( '25-34', 'gravityforms' ), __( '35-44', 'gravityforms' ), __( '45-54', 'gravityforms' ), __( '55-64', 'gravityforms' ), __( '65 or Above', 'gravityforms' ), __( 'Prefer Not to Answer', 'gravityforms' ) ),
-											__( 'Marital Status', 'gravityforms' )              => array( __( 'Single', 'gravityforms' ), __( 'Married', 'gravityforms' ), __( 'Divorced', 'gravityforms' ), __( 'Widowed', 'gravityforms' ) ),
+											__( 'Marital Status', 'gravityforms' )              => array( __( 'Single', 'gravityforms' ), __( 'Married', 'gravityforms' ), __( 'Divorced', 'gravityforms' ), __( 'Widowed', 'gravityforms' ), __( 'Separated', 'gravityforms' ), __( 'Domestic Partnership', 'gravityforms' ) ),
 											__( 'Employment', 'gravityforms' )                  => array( __( 'Employed Full-Time', 'gravityforms' ), __( 'Employed Part-Time', 'gravityforms' ), __( 'Self-employed', 'gravityforms' ), __( 'Not employed but looking for work', 'gravityforms' ), __( 'Not employed and not looking for work', 'gravityforms' ), __( 'Homemaker', 'gravityforms' ), __( 'Retired', 'gravityforms' ), __( 'Student', 'gravityforms' ), __( 'Prefer Not to Answer', 'gravityforms' ) ),
 											__( 'Job Type', 'gravityforms' )                    => array( __( 'Full-Time', 'gravityforms' ), __( 'Part-Time', 'gravityforms' ), __( 'Per Diem', 'gravityforms' ), __( 'Employee', 'gravityforms' ), __( 'Temporary', 'gravityforms' ), __( 'Contract', 'gravityforms' ), __( 'Intern', 'gravityforms' ), __( 'Seasonal', 'gravityforms' ) ),
 											__( 'Industry', 'gravityforms' )                    => array( __( 'Accounting/Finance', 'gravityforms' ), __( 'Advertising/Public Relations', 'gravityforms' ), __( 'Aerospace/Aviation', 'gravityforms' ), __( 'Arts/Entertainment/Publishing', 'gravityforms' ), __( 'Automotive', 'gravityforms' ), __( 'Banking/Mortgage', 'gravityforms' ), __( 'Business Development', 'gravityforms' ), __( 'Business Opportunity', 'gravityforms' ), __( 'Clerical/Administrative', 'gravityforms' ), __( 'Construction/Facilities', 'gravityforms' ), __( 'Consumer Goods', 'gravityforms' ), __( 'Customer Service', 'gravityforms' ), __( 'Education/Training', 'gravityforms' ), __( 'Energy/Utilities', 'gravityforms' ), __( 'Engineering', 'gravityforms' ), __( 'Government/Military', 'gravityforms' ), __( 'Green', 'gravityforms' ), __( 'Healthcare', 'gravityforms' ), __( 'Hospitality/Travel', 'gravityforms' ), __( 'Human Resources', 'gravityforms' ), __( 'Installation/Maintenance', 'gravityforms' ), __( 'Insurance', 'gravityforms' ), __( 'Internet', 'gravityforms' ), __( 'Job Search Aids', 'gravityforms' ), __( 'Law Enforcement/Security', 'gravityforms' ), __( 'Legal', 'gravityforms' ), __( 'Management/Executive', 'gravityforms' ), __( 'Manufacturing/Operations', 'gravityforms' ), __( 'Marketing', 'gravityforms' ), __( 'Non-Profit/Volunteer', 'gravityforms' ), __( 'Pharmaceutical/Biotech', 'gravityforms' ), __( 'Professional Services', 'gravityforms' ), __( 'QA/Quality Control', 'gravityforms' ), __( 'Real Estate', 'gravityforms' ), __( 'Restaurant/Food Service', 'gravityforms' ), __( 'Retail', 'gravityforms' ), __( 'Sales', 'gravityforms' ), __( 'Science/Research', 'gravityforms' ), __( 'Skilled Labor', 'gravityforms' ), __( 'Technology', 'gravityforms' ), __( 'Telecommunications', 'gravityforms' ), __( 'Transportation/Logistics', 'gravityforms' ), __( 'Other', 'gravityforms' ) ),
@@ -1594,6 +1604,7 @@ class GFFormDetail {
 											__( 'Size', 'gravityforms' )                        => array( __( 'Extra Small', 'gravityforms' ), __( 'Small', 'gravityforms' ), __( 'Medium', 'gravityforms' ), __( 'Large', 'gravityforms' ), __( 'Extra Large', 'gravityforms' ) ),
 
 										);
+
 										$predefined_choices = gf_apply_filters( array( 'gform_predefined_choices', rgar( $form, 'id' ) ), $predefined_choices );
 
 										$custom_choices = RGFormsModel::get_custom_choices();
@@ -3215,7 +3226,49 @@ class GFFormDetail {
 	 */
 	public static function editor_notices( $form ) {
 		GFFormDetail::editor_notice_for_legacy_form( $form );
+		GFFormDetail::editor_notice_for_ajax_save_failure( $form );
 		GFFormDetail::editor_notice_for_deprecated_ready_classes( $form );
+	}
+
+	/**
+	 * Display editor notice for forms that failed AJAX save.
+	 *
+	 * @since 2.6.2
+	 *
+	 * @param array $form
+	 */
+	public static function editor_notice_for_ajax_save_failure( $form ) {
+		if ( ! rgar( $_POST, 'gform_export', false ) ) {
+			return '';
+		}
+
+		?>
+		<div class="gform-alert" data-js="gform-alert" data-gform-alert-cookie="gform-alert-editor-deprecated-classes">
+			<span class="gform-alert__icon gform-icon gform-icon--campaign" aria-hidden="true"></span>
+			<div class="gform-alert__message-wrap">
+				<p class="gform-alert__message" tabindex="0">
+					<?php
+						echo sprintf(
+							// Translators: 1. Opening <a> tag with link to the form export page, 2. closing <a> tag, 3. Opening <a> tag for documentation link, 4. Closing <a> tag.
+							esc_html__( 'If you continue to encounter this error, you can %1$sexport your form%2$s to include in your support request. You can also disable AJAX saving for this form. %3$sLearn more%4$s.', 'gravityforms' ),
+							'<a target="_blank" href="' . admin_url( 'admin.php?page=gf_export&subview=export_form&export_form_ids=' . rgget( 'id' ) ) . '" rel="noopener noreferrer" class="gform-export-form">',
+							'</a>',
+							'<a target="_blank" href="https://docs.gravityforms.com/gform_disable_ajax_save/" rel="noopener noreferrer">',
+							'</a>'
+						);
+					?>
+				</p>
+			</div>
+			<button
+				class="gform-alert__dismiss"
+				aria-label="<?php esc_attr_e( 'Dismiss notification', 'gravityforms' ); ?>"
+				title="<?php esc_attr_e( 'Dismiss notification', 'gravityforms' ); ?>"
+				data-js="gform-alert-dismiss-trigger"
+			>
+				<span class="gform-icon gform-icon--delete"></span>
+			</button>
+		</div>
+		<?php
 	}
 
 	/**
@@ -3363,5 +3416,4 @@ class GFFormDetail {
 
 		return $form;
 	}
-
 }

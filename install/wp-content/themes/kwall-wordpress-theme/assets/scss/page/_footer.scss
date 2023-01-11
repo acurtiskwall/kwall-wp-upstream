@@ -1,0 +1,48 @@
+.site-footer{
+.site-info {
+	min-height: 260px;
+	background-color: $main-blue;
+	color: $white;
+	.footer-center {
+		text-align: center;
+		padding-top: 35px;
+		padding-bottom: 25px;
+		@include media-breakpoint-up(md) {
+			text-align: left;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+}
+.footer-lower {
+	background-color: $dark-blue;
+	color: $white;
+	font-weight: 700;
+	min-height: 94px;
+	.to-top {
+		text-align: right;
+
+	}
+	.to-top a{
+		text-decoration: none;
+		color: $white;
+	}
+}
+.social-link {
+	text-decoration: none;
+}
+	.menu-footer-nav-container ul  {
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+#menu-footer-nav a {
+	color: $white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+#menu-footer-nav li {
+	padding: 3px 0;
+}
+}

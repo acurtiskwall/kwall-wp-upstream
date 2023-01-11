@@ -1,0 +1,93 @@
+.page-template-page--directory{
+    .js-filter{
+        .person-info-wrapper {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            .person-info-wrapper-col {
+                flex-direction: row;
+                display: flex;
+                margin-bottom: 20px;
+                height: 100%;
+                border-top: 5px solid $light-blue;
+                box-shadow: 0px 2px 8px rgb(0 0 0 / 15%);
+                @include media-breakpoint-up(md) {
+                    flex-direction: row;
+                }
+                .user-person-info {
+                    padding:15px;
+                    .user-name {
+                        font-size: 25px;
+                        line-height: 23px;
+                        color: $main-blue;
+                    }
+                    .user-caption {
+                        color: $main-blue;
+                        font-weight: 500;
+                        font-style: italic;
+                    }
+                }
+            } 
+        }
+    }
+    .search-wrapper{
+        padding: 23px 20px;
+        position: relative;
+        background: $dark-blue;
+        color: $white;
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-0.5 * var(--bs-gutter-x));
+        margin-left: calc(-0.5 * var(--bs-gutter-x));
+        .input-wrapper{
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            margin-bottom: 13px;
+            @include media-breakpoint-up(md) {
+                flex-direction: row;
+            }
+            input{
+                border: 1px solid $white;
+                margin: 0;
+                padding: 9px 10px;
+                box-sizing: border-box;
+                flex: 1;
+                padding-bottom: 13px;
+                color: $white;
+                margin-bottom: 30px;
+                background: transparent;
+                border-radius: 0;
+                @include media-breakpoint-up(md) {
+                    margin-right: 20px;
+                    border: none;
+                    border-bottom: 1px solid white;
+                    margin-bottom: 15px;
+                }
+                &::placeholder{
+                    color: $white;
+                }
+                &:focus{
+                    outline: none;
+                }
+            }
+            
+        }
+        label{
+            margin-bottom: 9px;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $white;
+            font-weight: 700;
+        }
+        
+    }
+    h1 {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}

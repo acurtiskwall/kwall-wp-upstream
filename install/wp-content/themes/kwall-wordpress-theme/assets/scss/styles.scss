@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/**
+ * This file will be overwritten when the Bootstrap Framework source files
+ * are compiled using the SASS CSS pre-processor.
+ */
+
+/**
+* Include bootstrap
+ */
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//Variables
+@import "base/variables";
+@import "base/owl-carousel";
+
+//Components
+@import "components/accordion";
+@import "components/alerts";
+@import "components/buttons";
+@import "components/countdown-cta";
+@import "components/degree-sidebar";
+@import "components/experience-carousel";
+@import "components/footer-address";
+@import "components/fullwidth-media-section";
+@import "components/future-career";
+@import "components/gallery";
+@import "components/hero-banner";
+@import "components/home-slider";
+@import "components/request-info";
+@import "components/search";
+//page
+@import "page/header";
+@import "page/footer";
+@import "page/degree";
+@import "page/directory";
+@import "page/newsroom";

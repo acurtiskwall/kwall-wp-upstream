@@ -1,0 +1,27 @@
+.site-header {
+	background-color: $main-blue;
+	margin: 0 -12px;
+}
+
+body {
+    #masthead {
+	position: sticky;
+	height: 128px;
+	top: 0;
+	z-index: 3;
+}
+}
+
+.header-container {
+		height: 128px;
+}
+.admin-bar #masthead {
+  top: 32px;
+}
+.custom-logo {
+	max-width: 138px;
+	width: 100%;
+}
+#mega-menu-item-29 a{
+	border:none !important;
+}

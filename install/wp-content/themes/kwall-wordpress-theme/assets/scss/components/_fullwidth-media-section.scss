@@ -1,0 +1,25 @@
+.next-step-banner-wrap {
+	margin-bottom: 85px;
+	.banner-overlay {
+		display: table;
+
+	}
+	.next-step-white-corner-wrap {
+		background-color: $white;
+		padding-top: 0;
+		padding-bottom: 0;
+		width: 100%;
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			max-width: 650px;
+			bottom: -65px;
+			position: absolute;
+			padding: 25px;
+		}
+		.next-step-white-corner-inner {
+			.blue-btn {
+				max-width: 160px;
+			}
+		}
+	}
+}

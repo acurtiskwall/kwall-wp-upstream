@@ -1,0 +1,58 @@
+.degree-sidebar-wrap {
+    background-color: $white;
+    margin-top: 0;
+    @include media-breakpoint-up(md) {
+		margin-top: -65px;
+		z-index: 1;
+		position: relative;
+    }
+    .sidebar-buttons {
+        .button{
+            padding: 10px;
+        }
+        a{
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            background-color: $main-blue;
+            border: none;
+            border-radius: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: $white;
+            font-family: "Archivo Narrow",sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            height: 48px;
+            padding: 10.5px 50px;
+            -webkit-transition: all 0.1s ease-out;
+            transition: all 0.1s ease-out;
+            width: 100%;
+            &:hover{
+                background-color: $light-blue;
+                color: #002D65;
+                transition: .2s ease-in-out;
+                -webkit-transition: .2s ease-in-out;
+            }
+        }
+    }
+    .program-title {
+        h3{
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        line-height: 3.4rem;
+        border-left: solid 4px $main-blue;
+        vertical-align: middle;
+        text-align: left;
+        margin: 0;
+        padding: 0 0 0 1.5rem;
+        background: #efefef;
+        background: -webkit-gradient(linear,left top,right top,from(#efefef),color-stop(70%,white),to(white));
+        background: linear-gradient(90deg,#efefef 0%,white 70%,white 100%);
+        }
+    }
+    .program-sidebar-group {
+        padding: 1rem;
+        border-left: solid 4px #eeeeee;
+    }
+}

@@ -1,0 +1,12 @@
+.owl-carousel {
+    .owl-item {
+        img {
+            height: auto;
+            max-width: 100%;
+            @include media-breakpoint-up(md) {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}

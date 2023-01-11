@@ -1,0 +1,100 @@
+.newsroom-search-container{
+    background: $dark-blue;
+    form[id*="search-filter-form-"]{
+        color: $white;
+        display: flex;
+        justify-content: center;
+        ul{
+            margin: 0;
+            padding: 15px 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            li{
+                margin: 0 25px 0 0;
+                &:last-of-type{
+                    margin: 0;
+                }
+            }
+            .sf_date_field{
+                padding: 0;
+                li{
+                    padding: 0;
+                }
+            }
+        }
+        h4{
+            font-size: 14px;
+            padding: 5px 0px;
+        }
+    }
+}
+.searchandfilter {
+    input{
+        .sf-input-text {
+            background: transparent;
+            padding: 10px;
+            color: $white;
+            font-weight: 400;
+            border: none;
+            border-bottom: 1px solid $white;
+        }
+    }
+    select{
+            // border: solid 2px $white;
+            min-height: 32px;
+        
+    }
+    .sf-field-submit{
+        input[type="submit"] {
+            border: 2px solid $white;
+            padding: 10px 40px;
+            color: $white !important;
+            transition: 0.3s;
+            margin-top: 25px;
+            background: $dark-blue;
+            border-radius: 0;
+        }
+    }
+}
+.search-filter-results{
+    .newsroom-search-results-container{
+        max-width: 990px;
+        justify-content: center;
+        .newsroom-article{
+            margin-left: 0;
+            margin-right: 0;
+            flex-wrap: nowrap;
+            align-items: center;
+            .image-wrapper{
+                width: 145px;
+            }
+            .content-wrapper{
+                width: calc(100% - 145px);
+                padding: 30px;
+                .category-date{
+                    display: flex;
+                    span{
+                        margin: 10px;
+                    }
+                    .news-category{
+                        margin-left:0;
+                    }
+                }
+                h2{
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin: 0 0 20px;
+                    color: $main-blue;
+                    a{
+                        color: $main-blue;
+                    }
+                }
+                p{
+                    line-height: 20px;
+                    color: $black;
+                }
+            }
+        }
+    }
+}

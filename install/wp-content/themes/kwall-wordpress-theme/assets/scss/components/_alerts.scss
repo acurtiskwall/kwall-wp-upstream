@@ -1,0 +1,72 @@
+.alerts_main_container{
+  .alert_msg {
+    margin-bottom: 0;
+    padding: 5px 0 5px 0;
+    color: $white;
+    border-radius: 0;
+    .text {
+      font-size: 18px;
+      line-height: 25px;
+      text-shadow: 0px 0px 10px RGB(0 0 0/15%);
+      &:hover{
+        color: $dark-blue;
+      }
+    }
+    strong{
+      font-size: 20px;
+      line-height: 23px;
+    }
+    .text_wrap {
+      gap: 15px;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    .close {
+      position: absolute;
+      top: 4px !important;
+      font-size: 18px;
+      opacity: 1 !important;
+      line-height: 21px;
+      color: $white;
+      padding: 0;
+      right:20px;
+      &:hover {
+        color: $dark-blue;
+      }
+    }
+    .cookieSet {
+      display: none;
+    }
+  }  
+  .alert_black {
+    background: $black;
+  }
+  .alert_gold {
+    background: $gold;
+  }
+  
+  .alert_teal {
+    background: $teal
+  }
+  
+  .alert_red {
+    background: $red;
+  }
+  .alert {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+  }
+  .alert-dismissible {
+    padding-right: 4rem;
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.75rem 1.25rem;
+      color: inherit;
+    }
+  }
+}

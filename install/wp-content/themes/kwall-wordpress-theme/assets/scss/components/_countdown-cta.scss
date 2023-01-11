@@ -1,0 +1,73 @@
+.banner-wrap {
+	position: relative;
+	width: 100%;
+	.banner-overlay {
+		display: table;
+		.grad-inner {
+			min-height: 340px;
+			margin-top: 70px;
+			margin-bottom: 70px;
+			@include media-breakpoint-up(md) {
+				margin-top: 35px;
+				margin-bottom: 0px;
+			}
+			.grad-title {
+				font-size: 44px;
+				letter-spacing: 3.57143px;
+				text-transform: uppercase;
+				color: $white;
+				font-weight: bold;
+				text-align: center;
+				@include media-breakpoint-up(md) {
+					text-align: left;
+				}
+			}
+			.timer-number {
+				color: $white;
+				font-size: 36px;
+				line-height: 66px;
+				@include media-breakpoint-up(md) {
+					font-size: 56px;
+					line-height: 66px;
+				}
+			
+			}
+			.timer-word {
+				font-size: 20px;
+				line-height: 37px;
+				letter-spacing: 1.5px;
+				text-transform: uppercase;
+				color: $light-blue;
+				@include media-breakpoint-up(md) {
+					font-size: 32px;
+				}
+			}
+			#timer {
+				text-align: center;
+					@include media-breakpoint-up(md) {
+							text-align: left;	
+				}
+			}
+
+		}
+
+	}
+	.grad-bg-img {
+		min-height: 340px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+}
+.countdown-cta {
+	.grad-bottom {
+		height: 15px;
+		background:$purple;
+		.grad-bottom-blue {
+			background: $light-blue;
+		box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+		height: 10px;
+		}
+	}
+
+}
