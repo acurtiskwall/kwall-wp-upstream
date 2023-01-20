@@ -38,7 +38,7 @@
     "optimize-autoloader": true,
     "sort-packages": true,
     "platform": {
-      "php": "7.4"
+      "php": "7.2"
     },
     "allow-plugins": {
       "ffraenz/private-composer-installer": true,
