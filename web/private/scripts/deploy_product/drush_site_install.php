@@ -17,7 +17,7 @@ passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p
 
 //advanced-custom-fields-pro wp plugin install “http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=<YOUR_KEY>"
 //passthru("cp -r /code/install/wp-content/plugins/* " . $_ENV['HOME'] . "code/web/wp-content/plugins/");
-passthru("cp -r /code/install/wp-content/themes/kwall-wordpress-theme " . $_ENV['HOME'] . "code/web/wp-content/themes/");
+//passthru("cp -r /code/install/wp-content/themes/kwall-wordpress-theme " . $_ENV['HOME'] . "code/web/wp-content/themes/");
 passthru("cp -r /code/install/files_dev/* " . $_ENV['HOME'] . "files/");
 passthru("wp search-replace 'https://dev-kwall-demo-site.pantheonsite.io' '" . $secure_url . "'");
 passthru("wp user create " . $user . " 'info+sites@kwallcompany.com' --role=administrator --user_pass=" . $pass . "");
