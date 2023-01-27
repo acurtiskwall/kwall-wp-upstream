@@ -14,13 +14,13 @@ passthru('wp core install --url=' . $url . ' --title=' . $title . ' --admin_user
 passthru('wp db import /code/install/imported_database.sql');
 //GF
 passthru('wp plugin install gravityformscli --activate');
-passthru('terminus wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
+passthru('wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
 //ACF
 passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz" --activate');
 
 //advanced-custom-fields-pro wp plugin install “http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=<YOUR_KEY>"
   
-//passthru("cp -r /code/install/wp-content/plugins/* " . $_ENV['HOME'] . "code/web/wp-content/plugins/");
+passthru("cp -r /code/install/wp-content/plugins/* " . $_ENV['HOME'] . "code/web/wp-content/plugins/");
 //Theme
 passthru("cp -r /code/install/wp-content/themes/kwall-wordpress-theme " . $_ENV['HOME'] . "code/web/wp-content/themes/");
 //Files
