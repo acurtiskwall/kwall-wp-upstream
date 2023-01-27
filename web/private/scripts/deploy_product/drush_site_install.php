@@ -20,7 +20,7 @@ passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p
 
 //advanced-custom-fields-pro wp plugin install “http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=<YOUR_KEY>"
   
-passthru("cp -r /code/install/wp-content/plugins/* " . $_ENV['HOME'] . "code/web/wp-content/plugins/");
+//passthru("cp -r /code/install/wp-content/plugins/* " . $_ENV['HOME'] . "code/web/wp-content/plugins/");
 //Theme
 passthru("cp -r /code/install/wp-content/themes/kwall-wordpress-theme " . $_ENV['HOME'] . "code/web/wp-content/themes/");
 //Files
