@@ -14,7 +14,7 @@ passthru('wp core install --url=' . $url . ' --title=' . $title . ' --admin_user
 passthru('wp db import /code/install/imported_database.sql');
 //GF
 passthru('wp plugin install gravityformscli --activate');
-passthru('wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
+passthru('terminus wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
 //ACF
 passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz" --activate');
 
