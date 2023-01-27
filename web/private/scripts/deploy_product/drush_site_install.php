@@ -12,13 +12,20 @@ $email = 'site-deploys-aaaaeq6pviqdhxcpn7rglgn7h4@kwall.slack.com';
 print "Installing Wordpress...\n";
 passthru('wp core install --url=' . $url . ' --title=' . $title . ' --admin_user=' . $user . ' --admin_password=' . $pass . ' --admin_email=' . $email);
 passthru('wp db import /code/install/imported_database.sql');
+//GF
+passthru('wp plugin install gravityformscli --activate');
 passthru('wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
+//ACF
 passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz" --activate');
 
 //advanced-custom-fields-pro wp plugin install “http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=<YOUR_KEY>"
+  
 //passthru("cp -r /code/install/wp-content/plugins/* " . $_ENV['HOME'] . "code/web/wp-content/plugins/");
+//Theme
 passthru("cp -r /code/install/wp-content/themes/kwall-wordpress-theme " . $_ENV['HOME'] . "code/web/wp-content/themes/");
+//Files
 passthru("cp -r /code/install/files_dev/* " . $_ENV['HOME'] . "files/");
+//Search and replace
 passthru("wp search-replace 'https://dev-kwall-demo-site.pantheonsite.io' '" . $secure_url . "'");
 passthru("wp user create " . $user . " 'info+sites@kwallcompany.com' --role=administrator --user_pass=" . $pass . "");
 //Copy files from template folder
