@@ -40,7 +40,6 @@
       "wpackagist-plugin/custom-post-type-ui": "1.10.2",
       "wpackagist-plugin/lh-hsts": "^1.24",
       "wpackagist-plugin/duplicate-page":"4.5",
-      "wpackagist-plugin/gravityformscli":"1.4",
       "wpackagist-plugin/gtranslate":"^2.9.14",
       "wpackagist-plugin/relevanssi":"^4.18.2",
       "wpackagist-plugin/pantheon-advanced-page-cache": ">=0.3.0",
