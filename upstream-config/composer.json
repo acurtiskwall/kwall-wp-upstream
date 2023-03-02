@@ -22,10 +22,6 @@
                 "ffraenz/private-composer-installer": "^5.0"
               }
           }
-      },
-      {
-        "type":"composer",
-        "url":"https://connect.advancedcustomfields.com"
       }
     ],
     "require": {
@@ -40,7 +36,7 @@
       "wpackagist-plugin/add-to-any":"^1.8.5",
       "wpackagist-plugin/advanced-custom-fields":"^6.0.4",
       "wpackagist-plugin/advanced-custom-fields-font-awesome":"^4.0.4",
-      "wpengine/advanced-custom-fields-pro": "6.0.7",
+      "advanced-custom-fields/advanced-custom-fields-pro": "6.0.4",
       "wpackagist-plugin/custom-post-type-ui": "1.10.2",
       "wpackagist-plugin/lh-hsts": "^1.24",
       "wpackagist-plugin/duplicate-page":"4.5",

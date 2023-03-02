@@ -16,7 +16,7 @@ passthru('wp db import /code/install/imported_database.sql');
 passthru('wp plugin install gravityformscli --activate');
 passthru('wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
 //ACF
-//passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz" --activate');
+passthru('wp plugin install "http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz" --activate');
 
 //advanced-custom-fields-pro wp plugin install “http://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=<YOUR_KEY>"
   
