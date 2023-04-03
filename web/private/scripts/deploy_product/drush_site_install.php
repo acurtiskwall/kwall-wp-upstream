@@ -12,8 +12,8 @@ $email = 'site-deploys-aaaaeq6pviqdhxcpn7rglgn7h4@kwall.slack.com';
 print "Installing Wordpress...\n";
 passthru('wp core install --url=' . $url . ' --title=' . $title . ' --admin_user=' . $user . ' --admin_password=' . $pass . ' --admin_email=' . $email);
 passthru('wp db import /code/install/imported_database.sql');
-passthru('wp eval acf_pro_update_license("OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz")');
-//GF
+passthru('wp eval "acf_pro_update_license("OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz");"');
+//GF wp eval 'acf_pro_update_license("PUT_YOUR_KEY_HERE");'
 passthru('wp plugin install gravityformscli --activate');
 passthru('wp gf install --key=755411df45d8ebef01822c4ed8445766 --activate');
 //ACF
