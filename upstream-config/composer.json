@@ -8,6 +8,10 @@
             "url": "https://wpackagist.org"
         },
         {
+          "type":"composer",
+          "url":"https://connect.advancedcustomfields.com"
+      },
+        {
             "type": "package",
             "package": {
               "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -66,6 +70,12 @@
       "private-composer-installer": {
         "dotenv-path": ".",
         "dotenv-name": ".env"
+      }
+    },
+    "http-basic": {
+      "connect.advancedcustomfields.com": {
+        "username": "OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz",
+        "password": "https://dev-kwall-demo-site.pantheonsite.io/"
       }
     }
 }
