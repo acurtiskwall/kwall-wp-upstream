@@ -71,11 +71,5 @@
         "dotenv-path": ".",
         "dotenv-name": ".env"
       }
-    },
-    "http-basic": {
-      "connect.advancedcustomfields.com": {
-        "username": "OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz",
-        "password": "https://dev-kwall-demo-site.pantheonsite.io/"
-      }
     }
 }
