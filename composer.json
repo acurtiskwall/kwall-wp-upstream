@@ -9,6 +9,10 @@
       "url": "https://wpackagist.org"
     },
     {
+      "type":"composer",
+      "url":"https://connect.advancedcustomfields.com"
+  },
+    {
       "type": "path",
       "url": "upstream-config"
     },
@@ -89,5 +93,11 @@
       "./vendor/bin/phpunit tests/unit/*"
     ],
     "lint": "find web/wp-content -name '*.php' -exec php -l {} \\;"
+  },
+  "http-basic": {
+    "connect.advancedcustomfields.com": {
+      "username": "OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz",
+      "password": "https://dev-kwall-demo-site.pantheonsite.io/"
+    }
   }
 }
