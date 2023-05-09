@@ -68,7 +68,7 @@ $table_prefix = 'wp_';
 if ( ! defined( 'WP_DEBUG' ) ) {
 	define('WP_DEBUG', false);
 }
-define( 'ACF_PRO_LICENSE', 'OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz' , 'https://dev-kwall-wordpress.pantheonsite.io' );
+define( 'ACF_PRO_LICENSE', 'OWVjOWEwY2I1OTRjODZkNjMwM2JmMGYzY2NiODM0ZmQ3Yjk5YjZjYjFkMmExYjdiNmQzZTAz');
 /* That's all, stop editing! Happy Pressing. */
 
 /** Absolute path to the WordPress directory. */
